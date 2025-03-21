@@ -11,7 +11,7 @@
 .theme-style-light .fuct-item .icon span,
 .theme-style-light .service-item .icon span,
 .theme-style-light .resume-title .icon i {
-    color: var(--theme-color, #78cc6d) !important;
+    color: var(--theme-color, #fe7300) !important;
 }
 
 /* Dark Mode Styles */
@@ -27,7 +27,7 @@
 .theme-style-dark .fuct-item .icon span,
 .theme-style-dark .service-item .icon span,
 .theme-style-dark .resume-title .icon i {
-    color: var(--theme-color, #78cc6d) !important;
+    color: var(--theme-color, #f37100) !important;
 }
 
 /* Add CSS Variables */
