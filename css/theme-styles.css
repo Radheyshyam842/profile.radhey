@@ -1,0 +1,445 @@
+/* Light Mode Styles */
+.theme-style-light .content .title,
+.theme-style-light .fuct-item .name,
+.theme-style-light .fuct-item .icon span,
+.theme-style-light .revs-item .text,
+.theme-style-light .revs-item .user .info .name,
+.theme-style-light .revs-item .user .info .company {
+    color: var(--text-color-light, #323232) !important;
+}
+
+.theme-style-light .fuct-item .icon span,
+.theme-style-light .service-item .icon span,
+.theme-style-light .resume-title .icon i {
+    color: var(--theme-color, #78cc6d) !important;
+}
+
+/* Dark Mode Styles */
+.theme-style-dark .content .title,
+.theme-style-dark .fuct-item .name,
+.theme-style-dark .fuct-item .icon span,
+.theme-style-dark .revs-item .text,
+.theme-style-dark .revs-item .user .info .name,
+.theme-style-dark .revs-item .user .info .company {
+    color: var(--text-color-dark, #fff) !important;
+}
+
+.theme-style-dark .fuct-item .icon span,
+.theme-style-dark .service-item .icon span,
+.theme-style-dark .resume-title .icon i {
+    color: var(--theme-color, #78cc6d) !important;
+}
+
+/* Add CSS Variables */
+:root {
+    --theme-color: #78cc6d;
+    --text-color-light: #333333;
+    --text-color-dark: #ffffff;
+    --bg-color-light: #ffffff;
+    --bg-color-dark: #31313a;
+}
+
+/* Theme Panel Enhancements */
+.theme_panel .layout_style li a {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.theme_panel .layout_style li a.active {
+    transform: scale(1.1);
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for color changes */
+.fuct-item .icon span,
+.fuct-item .name,
+.content .title,
+.revs-item .text,
+.revs-item .user .info .name,
+.revs-item .user .info .company {
+    transition: color 0.3s ease;
+}
+
+/* Light Mode Styles with increased specificity */
+body.theme-style-light .content .title,
+body.theme-style-light .fuct-item .name,
+body.theme-style-light .fuct-item .icon span,
+body.theme-style-light .revs-item .text,
+body.theme-style-light .revs-item .user .info .name,
+body.theme-style-light .revs-item .user .info .company {
+    color: #000000 !important;
+}
+
+body.theme-style-light .content .title {
+    color: #000000 !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+body.theme-style-light .fuct-item .name {
+    color: #000000 !important;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+body.theme-style-light .fuct-item .icon span {
+    color: var(--theme-color, #78cc6d) !important;
+}
+
+/* Dark Mode Styles */
+.theme-style-dark .fuct-item .name,
+.theme-style-dark .content .title,
+.theme-style-dark .revs-item .text,
+.theme-style-dark .revs-item .user .info .name,
+.theme-style-dark .revs-item .user .info .company {
+    color: #ffffff !important; /* Enforced light color for dark mode */
+}
+
+/* Common Styles */
+.fuct-item {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.fuct-item .icon {
+    margin: 0 auto 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fuct-item .icon span {
+    font-size: 32px;
+    transition: all 0.3s ease;
+}
+
+.fuct-item:hover .icon span {
+    transform: scale(1.1);
+    color: var(--theme-color, #78cc6d);
+}
+
+.fuct-item .name {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Quote Section Specific Styles */
+.content.quote {
+    padding: 30px 0;
+}
+
+.revs-item {
+    position: relative;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+body.theme-style-light .revs-item {
+    background: rgba(245, 245, 245, 0.95);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.theme-style-light .revs-item .text {
+    color: #000000 !important;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body.theme-style-light .revs-item .user .info .name {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+body.theme-style-light .revs-item .user .info .company {
+    color: #333333 !important;
+}
+
+.theme-style-dark .revs-item {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.revs-item .text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.revs-item .user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.revs-item .user .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.revs-item .user .info .name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.revs-item .user .info .company {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Hover Effects */
+.revs-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Theme Panel Styles */
+.theme_panel {
+    position: fixed;
+    right: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background: #252525;
+    padding: 20px;
+    z-index: 999;
+    border-radius: 10px 0 0 10px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.theme_panel.active {
+    right: 0;
+}
+
+.toggle_bts {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+    background: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.toggle_bts:hover {
+    background: var(--theme-color, #78cc6d);
+}
+
+.toggle_bts a {
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.theme_panel .segment {
+    margin-bottom: 25px;
+}
+
+.theme_panel h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.theme_panel .layout_style {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.theme_panel .layout_style li a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme_panel .layout_style li a:hover,
+.theme_panel .layout_style li a.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme_panel .demo_list {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.theme_panel .demo_list li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.theme_panel .demo_list li a:hover,
+.theme_panel .demo_list li a.active {
+    background: var(--theme-color, #78cc6d);
+}
+
+.theme_panel .demo_list li a i {
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .theme_panel {
+        width: 180px;
+        right: -180px;
+    }
+
+    .toggle_bts {
+        width: 40px;
+        height: 40px;
+        left: -40px;
+    }
+
+    .toggle_bts a {
+        font-size: 20px;
+    }
+
+    .theme_panel .layout_style {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .theme_panel {
+        width: 160px;
+        right: -160px;
+    }
+
+    .theme_panel .demo_list {
+        flex-direction: column;
+    }
+
+    .theme_panel .demo_list li a {
+        padding: 6px 12px;
+    }
+}
+
+/* Color application for specific elements */
+.service-item .icon span,
+.resume-title .icon i,
+.skill-title .icon i {
+    color: var(--theme-color) !important;
+}
+
+/* Update background colors */
+.theme-style-light {
+    background-color: var(--bg-color-light);
+}
+
+.theme-style-dark {
+    background-color: var(--bg-color-dark);
+}
+
+/* Add hover effects */
+.fuct-item:hover .icon span {
+    color: var(--theme-color) !important;
+    transform: scale(1.2);
+}
+
+/* Light Mode Font Colors */
+body.theme-style-light {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+body.theme-style-light .content .title,
+body.theme-style-light .service-item .name,
+body.theme-style-light .pricing-item .name,
+body.theme-style-light .pricing-item .amount .number,
+body.theme-style-light .pricing-item .feature-list ul li,
+body.theme-style-light .fuct-item .name,
+body.theme-style-light .revs-item .text,
+body.theme-style-light .revs-item .user .info .name,
+body.theme-style-light .revs-item .user .info .company,
+body.theme-style-light .resume-item .name,
+body.theme-style-light .resume-item .date,
+body.theme-style-light .resume-item .company,
+body.theme-style-light .skills-list .name,
+body.theme-style-light .info-list ul li {
+    color: var(--text-color-light) !important;
+}
+
+/* Icon Colors in Light Mode */
+body.theme-style-light .service-item .icon span,
+body.theme-style-light .fuct-item .icon span,
+body.theme-style-light .resume-title .icon i,
+body.theme-style-light .skill-title .icon i {
+    color: var(--theme-color) !important;
+}
+
+/* Override any conflicting styles */
+body.theme-style-light .content .title {
+    color: var(--text-color-light) !important;
+    font-weight: 600;
+}
+
+body.theme-style-light .fuct-item .name {
+    color: var(--text-color-light) !important;
+    font-weight: 500;
+}
+
+body.theme-style-light .revs-item {
+    background: rgba(245, 245, 245, 0.95);
+}
+
+body.theme-style-light .revs-item .text,
+body.theme-style-light .revs-item .user .info .name,
+body.theme-style-light .revs-item .user .info .company {
+    color: var(--text-color-light) !important;
+}
+
+/* Transition Effects */
+.content .title,
+.fuct-item .name,
+.service-item .name,
+.revs-item .text,
+.revs-item .user .info .name,
+.revs-item .user .info .company,
+.resume-item .name,
+.resume-item .date,
+.resume-item .company,
+.skills-list .name {
+    transition: color 0.3s ease;
+}
