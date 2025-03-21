@@ -1,3 +1,4 @@
+/* Theme Variables */
 :root {
     --theme-color: #78cc6d;
     --bg-color: #31313a;
@@ -13,14 +14,19 @@ body.theme-style-light {
     --box-bg: #ffffff;
     --card-bg: #ffffff;
     --border-color: rgba(0,0,0,0.1);
-    --subtitle-color: rgba(0,0,0,0.7);
-    --subtitle-font: #323232;
-    --header-color: #666;
+    --subtitle-color: #666666;
+    --header-color: #323232;
     --menu-color: #323232;
     --link-color: #323232;
-    --profile-bg: #fff;
+    --profile-bg: #ffffff;
     --sidebar-bg: #f7f7f7;
     --progress-bar-bg: #eee;
+    --widget-bg: #ffffff;
+    --service-text: #666666;
+    --card-box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    --pricing-bg: #ffffff;
+    --resume-date: #666666;
+    --button-text: #ffffff;
 }
 
 /* Dark Theme */
@@ -30,14 +36,19 @@ body.theme-style-dark {
     --box-bg: #2d2d35;
     --card-bg: #31313a;
     --border-color: rgba(255,255,255,0.1);
-    --subtitle-color: rgba(255,255,255,0.7);
-    --subtitle-font: #fff;
+    --subtitle-color: rgba(255,255,255,0.85);
     --header-color: #fff;
     --menu-color: #fff;
     --link-color: #fff;
     --profile-bg: #31313a;
     --sidebar-bg: #2d2d35;
-    --progress-bar-bg: #444;
+    --progress-bar-bg: #444444;
+    --widget-bg: #2d2d35;
+    --service-text: #fff;
+    --card-box-shadow: none;
+    --pricing-bg: #2d2d35;
+    --resume-date: #fff;
+    --button-text: #fff;
 }
 
 .theme_panel {
@@ -352,4 +363,159 @@ input, textarea {
 /* Improve transitions */
 body, .card-inner, .content, .box-item, .profile {
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Element Styles */
+/* Content Sections */
+.content {
+    background: var(--box-bg);
+    box-shadow: var(--card-box-shadow);
+}
+
+/* Typography */
+.title, h1, h2, h3, h4, h5, h6 {
+    color: var(--header-color) !important;
+}
+
+.subtitle, p, li, .resume-date {
+    color: var(--text-color) !important;
+}
+
+/* Service Items */
+.service-item {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.service-item .name {
+    color: var(--header-color) !important;
+}
+
+.service-item p {
+    color: var(--service-text) !important;
+}
+
+/* Profile Section */
+.profile .title {
+    color: var(--header-color) !important;
+    font-weight: 600;
+}
+
+.profile .subtitle {
+    color: var(--subtitle-color) !important;
+}
+
+/* Resume Section */
+.resume-title .name {
+    color: var(--header-color) !important;
+}
+
+.resume-items .resume-item .date {
+    color: var(--resume-date) !important;
+}
+
+.resume-items .resume-item .company {
+    color: var(--subtitle-color) !important;
+}
+
+/* Skills Section */
+.skills-list .progress {
+    background: var(--progress-bar-bg);
+}
+
+.skills-list ul li .name {
+    color: var(--header-color) !important;
+}
+
+.skills-list .progress .percentage {
+    background: var(--theme-color);
+    color: var(--button-text);
+}
+
+/* Services & Pricing */
+.pricing-item {
+    background: var(--pricing-bg);
+    border-color: var(--border-color);
+}
+
+.pricing-item .name {
+    color: var(--header-color) !important;
+}
+
+.pricing-item .amount {
+    color: var(--theme-color);
+}
+
+.pricing-item .feature-list ul li {
+    color: var(--text-color) !important;
+}
+
+/* Buttons & Links */
+.button, .lnk {
+    background: var(--theme-color);
+    color: var(--button-text) !important;
+}
+
+/* Projects */
+.project-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.project-card .name {
+    color: var(--header-color) !important;
+}
+
+.project-card .category {
+    color: var(--subtitle-color) !important;
+}
+
+.tech-stack span {
+    background: var(--box-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Blog Posts */
+.box-item {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    box-shadow: var(--card-box-shadow);
+}
+
+.box-item .desc .name {
+    color: var(--header-color) !important;
+}
+
+.box-item .desc .text {
+    color: var(--text-color) !important;
+}
+
+/* Contact Form */
+input, textarea {
+    background: var(--box-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Menu Items */
+.top-menu-onepage .menu li a {
+    color: var(--menu-color);
+}
+
+.top-menu-onepage .menu li a span {
+    color: var(--menu-color);
+}
+
+.top-menu-onepage .menu li:hover a,
+.top-menu-onepage .menu li.active a {
+    color: var(--theme-color);
+}
+
+/* Transitions */
+*, *:before, *:after {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
 }
